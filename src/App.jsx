@@ -31,7 +31,7 @@ function App() {
         if (!fetchedImages.results.length) {
           setIsLoading(false);
           toast.error(
-            'Sorry, there are no images matching your search query. Please, try again!'
+            'Please, try again!'
           );
 
           return;

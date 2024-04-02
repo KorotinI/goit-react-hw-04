@@ -8,7 +8,7 @@ const SearchBar = ({ onSearch }) => {
     const query = form.elements.query.value;
 
     if (!query.trim().length) {
-      toast.error('Input field is empty. Please provide a value.');
+      toast.error('Input field is empty. Please provide a new value.');
 
       return;
     }
@@ -26,7 +26,7 @@ const SearchBar = ({ onSearch }) => {
           type="text"
           autoComplete="off"
           autoFocus
-          placeholder="Search images and photos"
+          placeholder="Input"
           name="query"
         />
         <button className={css.btn} type="submit">
