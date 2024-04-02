@@ -1,11 +1,22 @@
-import axios from 'axios';
 
-const apiKey = import.meta.env.VITE_API_KEY;
 
-export const requestImages = async (value, page) => {
-  const response = await axios.get(
-    `https://api.unsplash.com/search/photos?client_id=${apiKey}&page=${page}&per_page=12&orientation=landscape&query=${value}`
-  );
+import axios from "axios";
 
-  return response.data;
+const API_KEY = "FNo34P4mRw9F3UdsG0yFmktyyZ6CJmRITbCpFoAH0zY";
+axios.defaults.baseURL = "https://api.unsplash.com/";
+axios.defaults.headers.common["Authorization"] = `Client-ID ${API_KEY}`;
+axios.defaults.params = {
+  orientation: "landscape",
+  per_page: 15,
+};
+
+export const requestImages = async (query, page) => {
+  const { data } = await axios.get("search/photos", {
+    params: {
+      query: query,
+      page: page,
+    },
+  });
+
+  return data;
 };

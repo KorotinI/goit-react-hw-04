@@ -8,7 +8,7 @@
     margin-right: auto;
     gap: 10px;
     border-radius: 8px;
-    background: #4e75ff;
+    background: #b0f85f;
     color: #fff;
     font-family: Montserrat;
     font-size: 16px;
@@ -22,5 +22,5 @@
 
 .btn:hover,
 .btn:focus {
-    background-color: #6c8cff;
+    background-color: #b9ff7c;
 }
