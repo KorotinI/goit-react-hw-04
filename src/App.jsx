@@ -3,8 +3,8 @@ import ImageGallery from './components/ImageGallery/ImageGallery';
 import Loader from './components/Loader/Loader';
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn';
 import ImageModal from './components/ImageModal/ImageModal';
-import ErrorMessage from './components/ErrorMessage/ErrorMessage';
-import { requestImages } from './services/unsplash-api';
+import ErrorMessage from './components/ErrorMassage/ErrorMassage';
+import { requestImages } from './unsplash/unsplash-api';
 import { useState, useEffect, useRef } from 'react';
 import toast from 'react-hot-toast';
 
